@@ -18,7 +18,7 @@ void CommandQueue::produz(Commands cmd, int x , int y )
     cmdList[indPro].cmd = cmd;
     cmdList[indPro].x = x;
     cmdList[indPro].y = y;
-        
+
     indPro = (indPro + 1)%MAXCOMMANDS;
 
     cmdList[indPro].cmd = NENHUM;
@@ -34,9 +34,9 @@ ExCom CommandQueue::consome()
     cmd.cmd = cmdList[indCon].cmd;
     cmd.x = cmdList[indCon].x;
     cmd.y = cmdList[indCon].y;
-    
+
     if(cmd.cmd != NENHUM)
         indCon = (indCon + 1)%MAXCOMMANDS;;
-        
+
     return cmd;
 }
