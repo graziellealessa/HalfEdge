@@ -27,8 +27,19 @@ public class DrawPanel {
 		StdDraw.setScale(-2, 13);
 		StdDraw.show();
 		StdDraw.clear();
+		drawVertex();
 		drawEdges();
 		drawFaceNumbers();
+	}
+	private void drawVertex() {
+		int x, y;
+		StdDraw.setPenColor(StdDraw.BLACK);
+		for (int i = 0; i < vertexList.size(); i++) {
+			x=vertexList.get(i).getCoordX();
+			y=vertexList.get(i).getCoordY();
+			StdDraw.filledCircle(x, y, 0.15);
+		}
+		
 	}
 	private void drawFaceNumbers() {
 		//fun��o calcula o incentro dos triangulos e desenha o numero da face em verde
