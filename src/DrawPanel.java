@@ -23,15 +23,15 @@ public class DrawPanel {
 		this.halfedgeList = halfedgeList;
 	}
 	public void draw(){
-		StdDraw.setCanvasSize(1024, 1024);
-		StdDraw.setScale(0, 10);
+		StdDraw.setCanvasSize(1024, 800);
+		StdDraw.setScale(-2, 13);
 		StdDraw.show();
 		StdDraw.clear();
 		drawEdges();
 		drawFaceNumbers();
 	}
 	private void drawFaceNumbers() {
-		//função calcula o incentro dos triangulos e desenha o numero da face em verde
+		//funï¿½ï¿½o calcula o incentro dos triangulos e desenha o numero da face em verde
 		StdDraw.setPenColor(StdDraw.GREEN);
 		int firstedge, numberofvertex, nextedge;
 		double centerx=0, centery=0;
